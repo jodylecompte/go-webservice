@@ -8,8 +8,11 @@ import (
 
 func main() {
 	controllers.RegisterControllers()
+
+	fmt.Println("Listening on port 4500...")
+
 	err := http.ListenAndServe(":4500", nil)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("Server failed to start:", err)
 	}
 }
