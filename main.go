@@ -1,8 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/jodylecompte/go-webservice/models"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	u := models.User{
+		ID:        2,
+		FirstName: "Jody",
+		LastName:  "LeCompte",
+	}
 
+	fmt.Println(u)
 }
